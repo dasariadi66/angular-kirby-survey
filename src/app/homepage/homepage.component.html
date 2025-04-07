@@ -1,5 +1,22 @@
 <form>
-    <label for="feeling">How do you feel today?</label>
-    <input type="text" id="feeling" name="feeling" placeholder="Enter your feeling" />
-    <button type="submit">Submit</button>
+    <label>How do you feel today?</label>
+    <ul>
+        <li>
+            <input type="radio" id="happy" name="feeling" [(ngModel)]="feeling" value="Very Happy" />
+            <label for="happy">Very Happy</label>
+        </li>
+        <li>
+            <input type="radio" id="sad" name="feeling" [(ngModel)]="feeling" value="Happy" />
+            <label for="sad">Happy</label>
+        </li>
+        <li>
+            <input type="radio" id="excited" name="feeling" [(ngModel)]="feeling" value="Meh" />
+            <label for="excited">Meh</label>
+        </li>
+        <li>
+            <input type="radio" id="tired" name="feeling" [(ngModel)]="feeling" value="Sad" />
+            <label for="tired">Sad</label>
+        </li>
+    </ul>
+    <button type="submit" (click)="submitFeeling()">Submit</button>
 </form>
